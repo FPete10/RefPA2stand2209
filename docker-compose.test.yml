@@ -1,0 +1,36 @@
+version: "3.4"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        ENV: test
+      target: app
+    command: sh -c "mix deps.get && mix test.watch --only wip"
+    depends_on:
+      - db
+      - sync
+    volumes:
+      - ./refpa2.key:/refpa2.key
+    environment:
+      DATABASE_URL: "psql://refpa2_test:refpa2@db/refpa2_test"
+      SECRET_KEY_BASE: SBoEjwgxdx7zkouWs/r0i496KgCWSNDpU34JccR3E3ZLQOMOBdv1Fh8LlmA5tKe5
+
+  assets:
+    build:
+      context: .
+      target: assets
+      args:
+        ENV: test
+    depends_on:
+      - sync
+    command: sh -c "yarn install && yarn run watch"
+
+
+  db:
+    image: postgres:10.3-alpine
+    environment:
+      POSTGRES_USER: refpa2_test
+      POSTGRES_PASSWORD: refpa2
+      POSTGRES_DB: refpa2_test

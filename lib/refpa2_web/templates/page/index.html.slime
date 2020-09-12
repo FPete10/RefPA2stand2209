@@ -1,0 +1,30 @@
+h1.title.is-3 = gettext("Hello!")
+
+div.box
+  h3.subtitle.is-5 =gettext("Hint")
+  div.columns
+    div.column
+      span = gettext("Please create an account.")
+
+  = if !@conn.assigns[:session] do
+    div.columns
+      div.column.is-narrow
+        a.button.is-info(href="#{public_session_path(@conn, :new)}") = gettext("Login")
+      div.column.is-narrow
+        a.button.is-link(href="#{public_user_path(@conn, :new)}") = gettext("Create Account")
+  - else
+    div.columns
+      div.column.is-narrow
+        div.subtitle.is-6 = gettext("Your are already logged in.")
+
+
+- user = get_user(@conn)
+= if user do
+  = case user.role do
+    - _ ->
+    - :admin ->
+      div.box
+        h3.subtitle.is-5 =gettext("Admin-Corner")
+        div.columns
+          div.column
+            span =gettext("This area is not important for you! Only important functions for our graduation ceremony team are stored here.")

@@ -1,0 +1,330 @@
+#, elixir-format
+#: lib/refpa2_web/templates/layout/app.html.slime:66
+msgid "Error"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/layout/app.html.slime:52
+msgid "Success"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/layout/app.html.slime:79
+msgid "Source Code"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/password_reset_token/form.html.slime:3
+#: lib/refpa2_web/templates/session/new.html.slime:6 lib/refpa2_web/templates/user/new.html.slime:14
+msgid "Email"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/user/new.html.slime:30
+msgid "Last name"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/session/new.html.slime:2
+#: lib/refpa2_web/templates/session/new.html.slime:25
+msgid "Login"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/password_reset_token/show.html.slime:6
+#: lib/refpa2_web/templates/session/new.html.slime:13 lib/refpa2_web/templates/user/new.html.slime:38
+msgid "Password"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/user/new.html.slime:2
+msgid "Register new user"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/session/new.html.slime:22
+msgid "Remember me"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/password_reset_token/show.html.slime:13
+#: lib/refpa2_web/templates/user/new.html.slime:45
+msgid "Repeat password"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/layout/app.html.slime:9
+#: lib/refpa2_web/templates/layout/app.html.slime:9
+msgid "Tobias Hoge"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/layout/app.html.slime:59
+msgid "Warning"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/session_controller.ex:35
+msgid "Email or password incorrect."
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/session/new.html.slime:35
+msgid "You don't have an account yet? Register now!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/session_controller.ex:30
+msgid "Logged in."
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/session_controller.ex:47
+msgid "Logged out!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/user_controller.ex:24
+msgid "Error while creating user!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/user_controller.ex:19
+msgid "Registration successful! Please login."
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/session/new.html.slime:36
+#: lib/refpa2_web/templates/user/new.html.slime:53
+msgid "Create Account"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/_form.html.slime:40
+msgid "Save"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:39
+#: lib/refpa2_web/controllers/link_controller.ex:88 lib/refpa2_web/controllers/link_controller.ex:117
+#: lib/refpa2_web/controllers/link_controller.ex:140 lib/refpa2_web/controllers/link_controller.ex:163
+msgid "This action is permitted!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/index.html.slime:68
+#: lib/refpa2_web/templates/link/index.html.slime:68
+msgid "Archive link"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/password_reset_token/show.html.slime:2
+msgid "Change password"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/new.html.slime:2
+msgid "Create link"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/index.html.slime:11
+msgid "Create new short"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:52
+msgid "Creating link successful!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/index.html.slime:75
+#: lib/refpa2_web/templates/link/index.html.slime:75
+msgid "Delete link"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:106
+msgid "Deleting link successful!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/edit.html.slime:2
+#: lib/refpa2_web/templates/link/index.html.slime:59 lib/refpa2_web/templates/link/index.html.slime:59
+msgid "Edit link"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:158
+msgid "Error while archiving link!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:57
+msgid "Error while creating link!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:111
+msgid "Error while deleting link!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:135
+msgid "Error while publishing link!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:80
+msgid "Error while updating link!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/user/new.html.slime:24
+msgid "Fore name"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/session/new.html.slime:27
+msgid "Forgot Password"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/password_reset_token/new.html.slime:2
+msgid "Forgot password"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/index.html.slime:43
+msgid "Infinite"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/extension/firstrun.html.slime:2
+msgid "Installation successful"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:153
+msgid "Link is now archived!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/index.html.slime:25
+msgid "Private"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/_form.html.slime:20
+msgid "Private link"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/index.html.slime:64
+#: lib/refpa2_web/templates/link/index.html.slime:64
+msgid "Publish link"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:130
+msgid "Published link successful!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/password_reset_token/show.html.slime:21
+msgid "Reset password"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/_form.html.slime:3
+#: lib/refpa2_web/templates/link/index.html.slime:22
+msgid "URL"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/link_controller.ex:75
+msgid "Updating link successful!"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/user/new.html.slime:6
+msgid "User name"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/_form.html.slime:29
+msgid "Valid infinite"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/_form.html.slime:32
+#: lib/refpa2_web/templates/link/index.html.slime:24
+msgid "Valid until"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/extension/firstrun.html.slime:11
+#: lib/refpa2_web/templates/extension/index.html.slime:12
+msgid "View shorts"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/extension_controller.ex:10
+msgid "installed succesfuel"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/extension/index.html.slime:2
+#: lib/refpa2_web/templates/layout/app.html.slime:6 lib/refpa2_web/templates/layout/app.html.slime:8
+#: lib/refpa2_web/templates/layout/app.html.slime:8 lib/refpa2_web/templates/layout/app.html.slime:16
+#: lib/refpa2_web/templates/layout/app.html.slime:16 lib/refpa2_web/templates/layout/app.html.slime:28
+msgid "refpa2"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/index.html.slime:5
+#: lib/refpa2_web/templates/link/index.html.slime:21
+msgid "shorts"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/extension/firstrun.html.slime:5
+#: lib/refpa2_web/templates/extension/index.html.slime:6
+msgid "To start just type in 'sh/ + shortcut' or type in 'sh' and press tab to get redirect suggestions as you type."
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/index.html.slime:16
+msgid "No Shorts found."
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/link/_form.html.slime:11
+msgid "short"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/password_reset_controller.ex:53
+msgid "Could not update password."
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/password_reset_controller.ex:25
+#: lib/refpa2_web/controllers/password_reset_controller.ex:48
+msgid "Link is not valid"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/password_reset_controller.ex:43
+msgid "Password changed succesful"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/controllers/password_reset_controller.ex:17
+msgid "We have sent you a mail"
+msgstr ""
+
+#, elixir-format
+#: lib/refpa2_web/templates/password_reset_token/form.html.slime:10
+msgid "Sent email"
+msgstr ""
