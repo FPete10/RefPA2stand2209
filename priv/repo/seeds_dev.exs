@@ -12,6 +12,10 @@
 
 alias RefPA2.Repo
 alias RefPA2.User
+alias RefPA2.Elements.Node
+alias RefPA2.Elements.Edge
+alias RefPA2.Elements.Gateway
+alias RefPA2.Elements.Group
 import Ecto.Query, warn: false
 
 user =
@@ -25,4 +29,12 @@ case user do
 
   user ->
     user
+end
+
+case node do
+  nil ->
+    Node.create_node(%{"name" => "An1", "modell" => "A", "caption" => "Antrag annehmen", "external_participants" => "Bürger", "duration" => (5), "probability" => _, "data_object" => "Antrag", "it_system" => _, "p_value" => _, "marked" => false})
+
+  node ->
+    node
 end
