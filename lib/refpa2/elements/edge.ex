@@ -4,7 +4,8 @@ defmodule RefPA2.Elements.Edge do
   import Ecto.Changeset
   import Ecto.Query, warn: false
 
-  alias RefPA2.{Edge, Repo}
+  alias RefPA2.Repo
+  alias RefPA2.Elements.{Edge}
 
   require Logger
 
@@ -16,8 +17,10 @@ defmodule RefPA2.Elements.Edge do
     field(:modell, :string, null: false)
     field(:marked, :boolean)
 
-    has_one(:start_node, RefPA2.Elements.Node)
-    has_one(:end_node, RefPA2.Elements.Node)
+    belongs_to(:start_node, RefPA2.Elements.Node)
+    belongs_to(:end_node, RefPA2.Elements.Node)
+
+    timestamps()
   end
 
   defp changeset(edge, attrs) do
@@ -25,7 +28,9 @@ defmodule RefPA2.Elements.Edge do
     |> cast(attrs, [
       :name,
       :modell,
-      :marked
+      :marked,
+      :start_node_id,
+      :end_node_id,
     ])
   end
 
@@ -39,7 +44,7 @@ defmodule RefPA2.Elements.Edge do
 
   def create_edge(edge_params) do
     %Edge{}
-    |> changeset_create(edge_params)
+    |> changeset(edge_params)
     |> Repo.insert()
   end
 end

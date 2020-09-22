@@ -4,7 +4,8 @@ defmodule RefPA2.Elements.Group do
   import Ecto.Changeset
   import Ecto.Query, warn: false
 
-  alias RefPA2.{Group, Repo}
+  alias RefPA2.Repo
+  alias RefPA2.Elements.{Group}
 
   require Logger
 
@@ -15,7 +16,9 @@ defmodule RefPA2.Elements.Group do
     field(:name, :string)
     field(:p_value, :float)
 
-    has_many(:nodes, RefPA2.Elements.Node)
+    many_to_many :groups, RefPA2.Elements.Group, join_through: "node_groups", on_replace: :delete
+
+    timestamps()
   end
 
   defp changeset(group, attrs) do
@@ -36,7 +39,7 @@ defmodule RefPA2.Elements.Group do
 
   def create_group(group_params) do
     %Group{}
-    |> changeset_create(Group_params)
+    |> changeset(group_params)
     |> Repo.insert()
   end
 end
