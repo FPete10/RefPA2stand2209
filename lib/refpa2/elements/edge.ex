@@ -17,8 +17,8 @@ defmodule RefPA2.Elements.Edge do
     field(:modell, :string, null: false)
     field(:marked, :boolean)
 
-    belongs_to(:start_node, RefPA2.Elements.Node)
-    belongs_to(:end_node, RefPA2.Elements.Node)
+    belongs_to(:start, RefPA2.Elements.Node)
+    belongs_to(:end, RefPA2.Elements.Node)
 
     timestamps()
   end
@@ -29,8 +29,8 @@ defmodule RefPA2.Elements.Edge do
       :name,
       :modell,
       :marked,
-      :start_node_id,
-      :end_node_id,
+      :start_id,
+      :end_id
     ])
   end
 

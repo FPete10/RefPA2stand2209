@@ -33,9 +33,16 @@ node1 = Elements.create_node(%{"name" => "An1", "modell" => "A", "caption" =>
 
 
 node2 = Elements.create_node(%{"name" => "An2", "modell" => "A", "caption" =>
-  "Antrag absenden", "external_participants" => "Bürger", "duration" => (5), "probability" => nil, "data_object" => "Antrag", "it_system" => nil, "p_value" => nil, "marked" => false})
+  "Antrag absenden", "external_participants" => "Bürger", "duration" => (5), "probability" => nil, "data_object" => "Antrag", "it_system" => nil, "p_value" => nil, "marked" => false}, [node1])
 
-gateway = Elements.create_node(%{"name" => "G1", "modell" => "A", "marked" => false})
+gateway = Elements.create_gateway(%{"name" => "G1", "modell" => "A", "marked" => false})
+
+group = Elements.create_group(%{"name" => "G1", "p_value" => "5.0"}, [node1, node2])
+
+link = Elements.create_link([node1])
+link = Elements.add_node_to_link(link, [node2.id])
+link = Elements.add_node_to_link(link, [gateway.id])
+link = Elements.delete_node_from_link(link, [node2.id])
 
 Elements.create_edge(%{"name" => "E_An1_G1", "modell" => "A", "marked" => false}, node1, gateway)
 Elements.create_edge(%{"name" => "E_An2_G2", "modell" => "A", "marked" => false}, node2, gateway)

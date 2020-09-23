@@ -42,8 +42,7 @@ config :phoenix, :stacktrace_depth, 20
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
 
-config :refpa2, RefPA2.Mailer,
-  adapter: Bamboo.LocalAdapter
+config :refpa2, RefPA2.Mailer, adapter: Bamboo.LocalAdapter
 
 config :logger,
   level: :debug

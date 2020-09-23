@@ -10,8 +10,7 @@ config :refpa2, RefPA2Web.Endpoint,
   server: false,
   secret_key_base: "UrwGy41yrDwJsejSAcTrlVTIbyAUDZzIT5LQheRbcE6tltjuHKSnONcHvlX9+BwY"
 
-config :refpa2, RefPA2.Mailer,
-  adapter: Bamboo.TestAdapter
+config :refpa2, RefPA2.Mailer, adapter: Bamboo.TestAdapter
 
 # Print only warnings and errors during test
 config :logger, level: :warn

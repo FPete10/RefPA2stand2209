@@ -31,7 +31,6 @@ defmodule RefPA2.User.PasswordResetToken do
     |> put_change(:token, Token.generate())
   end
 
-
   # ---------------------------------------------------------------------------------
   # -------- Password Reset
   # ---------------------------------------------------------------------------------
@@ -48,8 +47,9 @@ defmodule RefPA2.User.PasswordResetToken do
     PasswordResetToken
     |> where([t], t.token == ^token and t.inserted_at >= ^hr_ago)
     |> Repo.one()
-    #where(PasswordResetToken, [t], t.token == ^token and t.inserted_at >= ^hr_ago)
-    #Repo.one(where(PasswordResetToken, [t], t.token == ^token and t.inserted_at >= ^hr_ago))
+
+    # where(PasswordResetToken, [t], t.token == ^token and t.inserted_at >= ^hr_ago)
+    # Repo.one(where(PasswordResetToken, [t], t.token == ^token and t.inserted_at >= ^hr_ago))
   end
 
   def create_password_reset_token(user) do

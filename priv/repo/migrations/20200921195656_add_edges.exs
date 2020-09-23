@@ -8,8 +8,8 @@ defmodule RefPA2.Repo.Migrations.AddEdges do
       add :modell, :string, null: false
       add :marked, :boolean
 
-      add :start_node_id, references(:nodes, on_delete: :delete_all, type: :uuid)
-      add :end_node_id, references(:nodes, on_delete: :delete_all, type: :uuid)
+      add :start_id, references(:nodes, type: :uuid)
+      add :end_id, references(:nodes, type: :uuid)
 
       timestamps()
     end

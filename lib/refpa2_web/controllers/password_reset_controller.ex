@@ -28,7 +28,11 @@ defmodule RefPA2Web.PasswordResetTokenController do
       token ->
         changeset = User.create_user_changeset(token)
 
-        render(conn, "show.html", token: token, changeset: changeset, action: public_password_reset_token_path(conn, :update, token))
+        render(conn, "show.html",
+          token: token,
+          changeset: changeset,
+          action: public_password_reset_token_path(conn, :update, token)
+        )
     end
   end
 
@@ -51,7 +55,11 @@ defmodule RefPA2Web.PasswordResetTokenController do
       {:error, changeset} ->
         conn
         |> put_flash(:error, gettext("Could not update password."))
-        |> render("show.html", token: token, changeset: changeset, action: public_password_reset_token_path(conn, :update, token))
+        |> render("show.html",
+          token: token,
+          changeset: changeset,
+          action: public_password_reset_token_path(conn, :update, token)
+        )
     end
   end
 end

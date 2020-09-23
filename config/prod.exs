@@ -20,6 +20,5 @@ config :refpa2, RefPA2.Mailer,
   hostname: "mail",
   port: 1025
 
-
 # Do not print debug messages in production
 config :logger, level: :info

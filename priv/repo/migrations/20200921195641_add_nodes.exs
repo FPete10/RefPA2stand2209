@@ -22,15 +22,20 @@ defmodule RefPA2.Repo.Migrations.AddNodes do
       timestamps()
     end
 
-    create table("node_node_connections", primary_key: false) do
-      add :node_id1, references(:nodes, type: :uuid), primary_key: true
+    create table("links", primary_key: false) do
+      add :id, :uuid, primary_key: true
+    end
 
-      add :node_id2, references(:nodes, type: :uuid), primary_key: true
+    create table("node_links", primary_key: false) do
+      add :link_id, references(:links, type: :uuid), primary_key: true
+
+      add :node_id, references(:nodes, type: :uuid, on_delete: :delete_all), primary_key: true
     end
   end
 
   def down do
-    drop table(:node_node_connections)
+    drop table(:node_links)
+    drop table(:links)
     drop table(:nodes)
 
     NodeType.drop_type()

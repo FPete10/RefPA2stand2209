@@ -5,7 +5,7 @@ defmodule RefPA2.Elements.Group do
   import Ecto.Query, warn: false
 
   alias RefPA2.Repo
-  alias RefPA2.Elements.{Group}
+  alias RefPA2.Elements.{Group, Node}
 
   require Logger
 
@@ -16,7 +16,7 @@ defmodule RefPA2.Elements.Group do
     field(:name, :string)
     field(:p_value, :float)
 
-    many_to_many :groups, RefPA2.Elements.Group, join_through: "node_groups", on_replace: :delete
+    many_to_many :nodes, RefPA2.Elements.Node, join_through: "node_groups", on_replace: :delete
 
     timestamps()
   end
@@ -27,6 +27,7 @@ defmodule RefPA2.Elements.Group do
       :name,
       :p_value
     ])
+    |> put_assoc(:nodes, attrs["nodes"] || group.nodes)
   end
 
   def get_groups() do
@@ -38,7 +39,15 @@ defmodule RefPA2.Elements.Group do
   end
 
   def create_group(group_params) do
+    nodes = Enum.map(group_params["node_ids"] || [], &Node.get_node(&1))
+
+    group_params =
+      group_params
+      |> Map.drop(["node_ids"])
+      |> Map.put("nodes", nodes)
+
     %Group{}
+    |> Repo.preload([:nodes])
     |> changeset(group_params)
     |> Repo.insert()
   end
